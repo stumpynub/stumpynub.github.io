@@ -1,0 +1,66 @@
+/* stumpynub.github.io: the game's own colours (godot/ui/pal.gd), system fonts, nothing loaded from elsewhere */
+:root {
+  --bg: #0f1118;
+  --surface: #1a1d28;
+  --surface-2: #242836;
+  --line: #2f3445;
+  --text: #eef0f6;
+  --muted: #8d93a9;
+  --accent: #5a97ff;
+  --mult: #ff7547;
+  --gold: #f5c03a;
+  --ok: #22c08a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+img { max-width: 100%; display: block; }
+main, .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header.top { max-width: 760px; margin: 0 auto; padding: 18px 16px; display: flex; align-items: center; gap: 12px; }
+header.top a.home { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; }
+header.top img { width: 36px; height: 36px; border-radius: 9px; }
+header.top nav { margin-left: auto; display: flex; gap: 16px; font-size: 15px; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover, header.top nav a[aria-current] { color: var(--text); }
+h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 4px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 36px 0 8px; }
+.muted { color: var(--muted); }
+.updated { color: var(--muted); margin: 0 0 24px; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+.hero { margin: 0 0 8px; border-radius: 20px; overflow: hidden; background: #12131b; }
+.hero img { width: 100%; height: auto; aspect-ratio: 1600 / 686; object-fit: cover; }
+.lede { font-size: 19px; line-height: 1.5; margin: 20px 0; }
+.buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 8px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 14px;
+  background: var(--accent); color: #fff; font-weight: 700; text-decoration: none;
+  box-shadow: 0 3px 0 #2f5fc4;
+}
+.btn.ghost { background: var(--surface-2); color: var(--text); box-shadow: 0 3px 0 #161925; }
+.btn.soon { background: var(--surface); color: var(--muted); box-shadow: none; border: 1px dashed var(--line); cursor: default; }
+.shots { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 14px; margin: 8px -2px 0; scroll-snap-type: x mandatory; }
+.shots img { width: 190px; flex: 0 0 auto; border-radius: 16px; border: 1px solid var(--line); scroll-snap-align: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 12px 0; }
+.card h3 { margin: 0 0 4px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); }
+.game { display: flex; gap: 14px; align-items: center; text-decoration: none; color: inherit; }
+.game img { width: 64px; height: 64px; border-radius: 15px; flex: 0 0 auto; }
+.game .icon { width: 64px; height: 64px; border-radius: 15px; flex: 0 0 auto; background: var(--surface-2); display: grid; place-items: center; font-size: 28px; }
+dl.faq dt { font-weight: 700; margin-top: 18px; }
+dl.faq dd { margin: 4px 0 0; color: #cfd3e1; }
+footer { max-width: 760px; margin: 48px auto 0; padding: 20px 16px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+footer a { color: var(--muted); }
+@media (max-width: 520px) {
+  h1 { font-size: 26px; }
+  .lede { font-size: 17px; }
+  header.top nav { gap: 12px; font-size: 14px; }
+  .shots img { width: 160px; }
+}
